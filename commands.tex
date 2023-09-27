@@ -1,0 +1,21 @@
+\newcommand{\prompt}[1]{\textbf{#1}\\}
+\newcommand{\original}[1]{
+    \textbf{Original}\\
+        {#1}\\
+}
+\newcommand{\premise}[1]{\textsc{Premise\\ }#1\\}
+\newcommand{\conclusion}[1]{\textsc{Conclusion\\ }#1\\}
+\newcommand{\premandconc}[1]{\textbf{Premise and Conclusion\\}#1\\}
+
+\newcommand{\exercise}[1]{\textbf{Premise and Conclusion\\}#1\\}
+
+\renewcommand\symbol[2]{\item $#1$: #2}
+\newcommand\symbolization[1]{\\$\mathbf{#1}$}
+\newenvironment{statement}[1]{
+    \item #1
+        \begin{itemize} [label=, topsep=0pt]
+}{
+    \end{itemize}
+}
+
+\usepackage{amssymb}

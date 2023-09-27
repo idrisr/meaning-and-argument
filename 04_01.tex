@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\date{2023/09/26}
+\author{Idris Raja}
+\title{Exercise 4.1}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\input{commands}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+\begin{statement}{Today is the 394th day of captivity, and the hostages are not
+to be released in the near future.}
+\item \symbol{T}{Today is the 394th day of captivity}
+\item \symbol{R}{the hostages are not to be released in the near future}
+\item \symbolization{T \land R}
+\end{statement}
+
+\begin{statement}{It is not true that John got an ‘A’ in logic.}
+\item \symbol{A}{John got an 'A' in logic.}
+\item \symbolization{\neg A}
+\end{statement}
+
+\begin{statement}{John stayed at home all day, and so did Mary.}
+\item \symbol{A}{John stayed at home all day}
+\item \symbol{B}{Mary stayed at home all day}
+\item \symbolization{A \land B}
+\end{statement}
+
+\begin{statement}{John could not solve the problem, and none of his friends could either.}
+\item \symbol{A}{John could solve the problem}
+\item \symbol{B}{one of John's friends could solve the problem}
+\item \symbolization{\neg A \land \neg B}
+\end{statement}
+
+\begin{statement}{John could not go, and neither could Mary.}
+\item \symbol{A}{John could go}
+\item \symbol{B}{Mary could go}
+\item \symbolization{\neg A \land \neg B}
+\end{statement}
+
+\begin{statement}{He has never been on time to a meeting.}
+\item \symbol{A}{He arrived on time to a meeting at least once.}
+\item \symbolization{\neg A}
+\end{statement}
+
+\begin{statement}{No one read the book.}
+\item \symbol{A}{At least one person read the book.}
+\item \symbolization{\neg A}
+\end{statement}
+
+\begin{statement}{The book was not read by anyone.}
+\item \symbol{A}{At least one person read the book.}
+\item \symbolization{\neg A}
+\end{statement}
+
+\begin{statement}{None of his students understands.}
+\item \symbol{A}{At least one of his students understands.}
+\item \symbolization{\neg A}
+\end{statement}
+
+\begin{statement}{That Jack ever slept here is impossible.}
+\item \symbol{A}{Jack has ever slept here}
+\item \symbolization{\neg A}
+\end{statement}
+
+\begin{statement}{He doesn't go to church at the university.}
+\item \symbol{A}{He does go to church at the university}
+\item \symbolization{\neg A}
+\end{statement}
+
+\begin{statement}{This struck me as unintelligible, and I did not need to know
+further particulars.}
+\item \symbol{A}{This struck me intelligible}
+\item \symbol{B}{I did need to know further particulars}
+\item \symbolization{\neg A \land \neg B}
+\end{statement}
+
+\begin{statement}{I was unaware at the time.}
+\item \symbol{A}{I was aware at the time}
+\item \symbolization{\neg A}
+\end{statement}
+
+\begin{statement}{My story is not unknown.}
+\item \symbol{A}{My story known}
+\item \symbolization{\neg A}
+\end{statement}
+
+\begin{statement}{Paranoid people are not rare and more dangerous than useful.}
+\item \symbol{A}{Paranoid people are rare}
+\item \symbol{B}{Paranoid people are more dangerous than useful}
+\item \symbolization{\neg A \land B}
+\end{statement}
+
+\begin{statement}{This is not all Frank offers.}
+\item \symbol{A}{This is all Frank offers}
+\item \symbolization{\neg A}
+\end{statement}
+
+% \begin{statement}{}
+% \item \symbol{}{}
+% \item \symbolization{}
+% \end{statement}
+
+\end{enumerate}
+\end{document}
