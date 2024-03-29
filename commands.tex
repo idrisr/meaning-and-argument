@@ -9,8 +9,10 @@
 
 \newcommand{\exercise}[1]{\textbf{Premise and Conclusion\\}#1\\}
 
+\newcommand{\then}{\implies}
 \renewcommand\symbol[2]{\item $#1$: #2}
-\newcommand\symbolization[1]{\\$\mathbf{#1}$}
+
+\newcommand\symbolization[1]{$\mathbf{#1}$}
 \newenvironment{statement}[1]{
     \item #1
         \begin{itemize} [label=, topsep=0pt]
@@ -18,4 +20,19 @@
     \end{itemize}
 }
 
+\newenvironment{ttable}[1]{
+    \item #1
+        \begin{itemize} [label=, topsep=0pt]
+}{
+    \end{itemize}
+}
+
+\newcommand{\lif}{\rightarrow}
+\newcommand{\liff}{\rightarrow}
+\newcommand{\elim}{\rightarrow}
+
+\usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{color}
+\usepackage[tableaux]{prooftrees}
+\usepackage{semantic}

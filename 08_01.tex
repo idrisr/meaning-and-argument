@@ -1,0 +1,76 @@
+% \input{preamble}
+% \date{2023/09/30}
+% \begin{document}
+% \maketitle
+
+\section{\S 8.1, Arguments and Truth Trees}
+\begin{enumerate}
+
+\begin{statement}{Kennedy, Johnson, and Nixon were all presidents. It is not true that Kennedy
+and Mondale were both presidents. So, it is also not the case that Nixon
+and Mondale were both presidents.}
+\symbol{A}{Kennedy was a president.}
+\symbol{B}{Johnson was a president.}
+\symbol{C}{Nixon was a president.}
+\symbol{D}{Mondale was a president.}
+\symbolization{A \land B \land C, \neg (A \land D) \therefore \neg (C \land D)}
+\end{statement}
+
+\begin{tableau}
+{ line no sep= 2cm, for tree={s sep'=10mm}, just sep= 1.5cm, for tree={s sep'=10mm}, }
+[A \land B \land C,                  just={Premise}
+    [\neg (A \land D),               just={Premise}
+        [C \land D,                  just={Negated Conclusion}
+            [A,                      just={From 1}
+                [B,                  just={From 1}
+                    [C,              just={From 1}
+                        [D,          just={From 3}
+                            [\neg A, close, just={From 2} ]
+                            [\neg D, close]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ]
+]
+\end{tableau}
+
+
+\begin{statement}{Notre Dame is clearly not unbeatable, since they are clearly beatable}
+\symbol{A}{Notre Dame is beatable}
+\symbolization{A \therefore \neg \neg A}
+\end{statement}
+\begin{tableau}
+{
+% begin tree preamble
+line no sep= 2cm,
+% distance of tree from line numbers
+for tree={s sep'=10mm},
+% control horizontal spread of branches
+}
+% end tree preamble
+[A, just={Premise}
+    [\neg A, close, just={Negated Conclusion}]
+]
+\end{tableau}
+
+
+\begin{statement}{I will do logic without taking tests. So, I am not taking tests.}
+\symbol{A}{I will do logic}
+\symbol{B}{I will take tests}
+\symbolization{A \land \neg B \therefore \neg B}
+\end{statement}
+\begin{tableau}
+{ line no sep= 2cm, for tree={s sep'=10mm}, just sep= 1.5cm, for tree={s sep'=10mm}, }
+[A \land \neg B,             just={Premise}
+    [B,                      just={Negated Conclusion}
+        [A,                  just={From 1}
+            [\neg B, close, just={From 1} ]
+        ]
+    ]
+]
+\end{tableau}
+
+\end{enumerate}
+% \end{document}

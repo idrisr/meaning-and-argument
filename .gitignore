@@ -23,3 +23,7 @@ result
 *log
 *pdf
 build/
+*fls
+*gz
+*toc
+*fdb_latexmk

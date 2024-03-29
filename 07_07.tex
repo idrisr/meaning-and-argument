@@ -1,0 +1,156 @@
+% \input{preamble}
+% \date{2023/09/28}
+% \begin{document}
+% \maketitle
+
+\section{\S 7.7 Truth Tables and Statements}
+\begin{enumerate}
+    \item \begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c | c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{}c@{}@{ }c}
+C & F & T & V &  & $\lnot$ & V & $\rightarrow$ & ( & ( & F & $\land$ & T & ) & $\land$ & ( & C & $\land$ & T & ) & ) & \\
+\hline
+T & T & T & T &  & F & T & \textbf{T} &  &  & T & T & T &  & T &  & T & T & T &  &  & \\
+T & T & T & F &  & T & F & \textbf{T} &  &  & T & T & T &  & T &  & T & T & T &  &  & \\
+T & T & F & T &  & F & T & \textbf{T} &  &  & T & F & F &  & F &  & T & F & F &  &  & \\
+T & T & F & F &  & T & F & \textbf{F} &  &  & T & F & F &  & F &  & T & F & F &  &  & \\
+T & F & T & T &  & F & T & \textbf{T} &  &  & F & F & T &  & F &  & T & T & T &  &  & \\
+T & F & T & F &  & T & F & \textbf{F} &  &  & F & F & T &  & F &  & T & T & T &  &  & \\
+T & F & F & T &  & F & T & \textbf{T} &  &  & F & F & F &  & F &  & T & F & F &  &  & \\
+T & F & F & F &  & T & F & \textbf{F} &  &  & F & F & F &  & F &  & T & F & F &  &  & \\
+F & T & T & T &  & F & T & \textbf{T} &  &  & T & T & T &  & F &  & F & F & T &  &  & \\
+F & T & T & F &  & T & F & \textbf{F} &  &  & T & T & T &  & F &  & F & F & T &  &  & \\
+F & T & F & T &  & F & T & \textbf{T} &  &  & T & F & F &  & F &  & F & F & F &  &  & \\
+F & T & F & F &  & T & F & \textbf{F} &  &  & T & F & F &  & F &  & F & F & F &  &  & \\
+F & F & T & T &  & F & T & \textbf{T} &  &  & F & F & T &  & F &  & F & F & T &  &  & \\
+F & F & T & F &  & T & F & \textbf{F} &  &  & F & F & T &  & F &  & F & F & T &  &  & \\
+F & F & F & T &  & F & T & \textbf{T} &  &  & F & F & F &  & F &  & F & F & F &  &  & \\
+F & F & F & F &  & T & F & \textbf{F} &  &  & F & F & F &  & F &  & F & F & F &  &  & \\
+\end{tabular}
+
+\item
+\begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c | c@{ }@{}c@{}@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{}c@{}@{ }c@{ }@{}c@{}@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c}
+J & M & S &  & ( & ( & S & $\rightarrow$ & M & ) & $\land$ & ( & M & $\rightarrow$ & S & ) & ) & $\land$ & ( & ( & $\lnot$ & J & $\rightarrow$ & $\lnot$ & S & ) & $\land$ & $\lnot$ & J & ) & \\
+\hline
+T & T & T &  &  &  & T & T & T &  & T &  & T & T & T &  &  & \textbf{F} &  &  & F & T & T & F & T &  & F & F & T &  & \\
+T & T & F &  &  &  & F & T & T &  & F &  & T & F & F &  &  & \textbf{F} &  &  & F & T & T & T & F &  & F & F & T &  & \\
+T & F & T &  &  &  & T & F & F &  & F &  & F & T & T &  &  & \textbf{F} &  &  & F & T & T & F & T &  & F & F & T &  & \\
+T & F & F &  &  &  & F & T & F &  & T &  & F & T & F &  &  & \textbf{F} &  &  & F & T & T & T & F &  & F & F & T &  & \\
+F & T & T &  &  &  & T & T & T &  & T &  & T & T & T &  &  & \textbf{F} &  &  & T & F & F & F & T &  & F & T & F &  & \\
+F & T & F &  &  &  & F & T & T &  & F &  & T & F & F &  &  & \textbf{F} &  &  & T & F & T & T & F &  & T & T & F &  & \\
+F & F & T &  &  &  & T & F & F &  & F &  & F & T & T &  &  & \textbf{F} &  &  & T & F & F & F & T &  & F & T & F &  & \\
+F & F & F &  &  &  & F & T & F &  & T &  & F & T & F &  &  & \textbf{T} &  &  & T & F & T & T & F &  & T & T & F &  & \\
+\end{tabular}
+
+\item
+\begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{}c@{}@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c}
+J & R & S &  & ( & $\lnot$ & R & $\lor$ & $\lnot$ & J & ) & $\land$ & $\lnot$ & ( & ( & R & $\lor$ & J & ) & $\rightarrow$ & S & ) & \\
+\hline
+T & T & T &  &  & F & T & F & F & T &  & \textbf{F} & F &  &  & T & T & T &  & T & T &  & \\
+T & T & F &  &  & F & T & F & F & T &  & \textbf{F} & T &  &  & T & T & T &  & F & F &  & \\
+T & F & T &  &  & T & F & T & F & T &  & \textbf{F} & F &  &  & F & T & T &  & T & T &  & \\
+T & F & F &  &  & T & F & T & F & T &  & \textbf{T} & T &  &  & F & T & T &  & F & F &  & \\
+F & T & T &  &  & F & T & T & T & F &  & \textbf{F} & F &  &  & T & T & F &  & T & T &  & \\
+F & T & F &  &  & F & T & T & T & F &  & \textbf{T} & T &  &  & T & T & F &  & F & F &  & \\
+F & F & T &  &  & T & F & T & T & F &  & \textbf{F} & F &  &  & F & F & F &  & T & T &  & \\
+F & F & F &  &  & T & F & T & T & F &  & \textbf{F} & F &  &  & F & F & F &  & T & F &  & \\
+\end{tabular}
+
+\item
+\begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{}c@{ }}
+D & H & M & $\lnot$ & ( & H & $\lor$ & ( & M & $\lor$ & D & ) & )\\
+\hline
+T & T & T & \textbf{F} &  & T & T &  & T & T & T &  & \\
+T & T & F & \textbf{F} &  & T & T &  & F & T & T &  & \\
+T & F & T & \textbf{F} &  & F & T &  & T & T & T &  & \\
+T & F & F & \textbf{F} &  & F & T &  & F & T & T &  & \\
+F & T & T & \textbf{F} &  & T & T &  & T & T & F &  & \\
+F & T & F & \textbf{F} &  & T & T &  & F & F & F &  & \\
+F & F & T & \textbf{F} &  & F & T &  & T & T & F &  & \\
+F & F & F & \textbf{T} &  & F & F &  & F & F & F &  & \\
+\end{tabular}
+
+\item
+\begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c}
+I & L & W &  & ( & $\lnot$ & I & $\lor$ & L & ) & $\rightarrow$ & W & \\
+\hline
+T & T & T &  &  & F & T & T & T &  & \textbf{T} & T & \\
+T & T & F &  &  & F & T & T & T &  & \textbf{F} & F & \\
+T & F & T &  &  & F & T & F & F &  & \textbf{T} & T & \\
+T & F & F &  &  & F & T & F & F &  & \textbf{T} & F & \\
+F & T & T &  &  & T & F & T & T &  & \textbf{T} & T & \\
+F & T & F &  &  & T & F & T & T &  & \textbf{F} & F & \\
+F & F & T &  &  & T & F & T & F &  & \textbf{T} & T & \\
+F & F & F &  &  & T & F & T & F &  & \textbf{F} & F & \\
+\end{tabular}
+
+\item
+\begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c | c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{}c@{}@{ }c}
+D & F & L & S & T & W &  & $\lnot$ & ( & W & $\lor$ & S & ) & $\land$ & ( & $\lnot$ & ( & T & $\lor$ & D & ) & $\land$ & ( & $\lnot$ & F & $\rightarrow$ & $\lnot$ & L & ) & ) & \\
+\hline
+T & T & T & T & T & T &  & F &  & T & T & T &  & \textbf{F} &  & F &  & T & T & T &  & F &  & F & T & T & F & T &  &  & \\
+T & T & T & T & T & F &  & F &  & F & T & T &  & \textbf{F} &  & F &  & T & T & T &  & F &  & F & T & T & F & T &  &  & \\
+T & T & T & T & F & T &  & F &  & T & T & T &  & \textbf{F} &  & F &  & F & T & T &  & F &  & F & T & T & F & T &  &  & \\
+T & T & T & T & F & F &  & F &  & F & T & T &  & \textbf{F} &  & F &  & F & T & T &  & F &  & F & T & T & F & T &  &  & \\
+T & T & T & F & T & T &  & F &  & T & T & F &  & \textbf{F} &  & F &  & T & T & T &  & F &  & F & T & T & F & T &  &  & \\
+T & T & T & F & T & F &  & T &  & F & F & F &  & \textbf{F} &  & F &  & T & T & T &  & F &  & F & T & T & F & T &  &  & \\
+T & T & T & F & F & T &  & F &  & T & T & F &  & \textbf{F} &  & F &  & F & T & T &  & F &  & F & T & T & F & T &  &  & \\
+T & T & T & F & F & F &  & T &  & F & F & F &  & \textbf{F} &  & F &  & F & T & T &  & F &  & F & T & T & F & T &  &  & \\
+T & T & F & T & T & T &  & F &  & T & T & T &  & \textbf{F} &  & F &  & T & T & T &  & F &  & F & T & T & T & F &  &  & \\
+T & T & F & T & T & F &  & F &  & F & T & T &  & \textbf{F} &  & F &  & T & T & T &  & F &  & F & T & T & T & F &  &  & \\
+T & T & F & T & F & T &  & F &  & T & T & T &  & \textbf{F} &  & F &  & F & T & T &  & F &  & F & T & T & T & F &  &  & \\
+T & T & F & T & F & F &  & F &  & F & T & T &  & \textbf{F} &  & F &  & F & T & T &  & F &  & F & T & T & T & F &  &  & \\
+T & T & F & F & T & T &  & F &  & T & T & F &  & \textbf{F} &  & F &  & T & T & T &  & F &  & F & T & T & T & F &  &  & \\
+T & T & F & F & T & F &  & T &  & F & F & F &  & \textbf{F} &  & F &  & T & T & T &  & F &  & F & T & T & T & F &  &  & \\
+T & T & F & F & F & T &  & F &  & T & T & F &  & \textbf{F} &  & F &  & F & T & T &  & F &  & F & T & T & T & F &  &  & \\
+T & T & F & F & F & F &  & T &  & F & F & F &  & \textbf{F} &  & F &  & F & T & T &  & F &  & F & T & T & T & F &  &  & \\
+T & F & T & T & T & T &  & F &  & T & T & T &  & \textbf{F} &  & F &  & T & T & T &  & F &  & T & F & F & F & T &  &  & \\
+T & F & T & T & T & F &  & F &  & F & T & T &  & \textbf{F} &  & F &  & T & T & T &  & F &  & T & F & F & F & T &  &  & \\
+T & F & T & T & F & T &  & F &  & T & T & T &  & \textbf{F} &  & F &  & F & T & T &  & F &  & T & F & F & F & T &  &  & \\
+T & F & T & T & F & F &  & F &  & F & T & T &  & \textbf{F} &  & F &  & F & T & T &  & F &  & T & F & F & F & T &  &  & \\
+T & F & T & F & T & T &  & F &  & T & T & F &  & \textbf{F} &  & F &  & T & T & T &  & F &  & T & F & F & F & T &  &  & \\
+T & F & T & F & T & F &  & T &  & F & F & F &  & \textbf{F} &  & F &  & T & T & T &  & F &  & T & F & F & F & T &  &  & \\
+T & F & T & F & F & T &  & F &  & T & T & F &  & \textbf{F} &  & F &  & F & T & T &  & F &  & T & F & F & F & T &  &  & \\
+T & F & T & F & F & F &  & T &  & F & F & F &  & \textbf{F} &  & F &  & F & T & T &  & F &  & T & F & F & F & T &  &  & \\
+T & F & F & T & T & T &  & F &  & T & T & T &  & \textbf{F} &  & F &  & T & T & T &  & F &  & T & F & T & T & F &  &  & \\
+T & F & F & T & T & F &  & F &  & F & T & T &  & \textbf{F} &  & F &  & T & T & T &  & F &  & T & F & T & T & F &  &  & \\
+T & F & F & T & F & T &  & F &  & T & T & T &  & \textbf{F} &  & F &  & F & T & T &  & F &  & T & F & T & T & F &  &  & \\
+T & F & F & T & F & F &  & F &  & F & T & T &  & \textbf{F} &  & F &  & F & T & T &  & F &  & T & F & T & T & F &  &  & \\
+T & F & F & F & T & T &  & F &  & T & T & F &  & \textbf{F} &  & F &  & T & T & T &  & F &  & T & F & T & T & F &  &  & \\
+T & F & F & F & T & F &  & T &  & F & F & F &  & \textbf{F} &  & F &  & T & T & T &  & F &  & T & F & T & T & F &  &  & \\
+T & F & F & F & F & T &  & F &  & T & T & F &  & \textbf{F} &  & F &  & F & T & T &  & F &  & T & F & T & T & F &  &  & \\
+T & F & F & F & F & F &  & T &  & F & F & F &  & \textbf{F} &  & F &  & F & T & T &  & F &  & T & F & T & T & F &  &  & \\
+F & T & T & T & T & T &  & F &  & T & T & T &  & \textbf{F} &  & F &  & T & T & F &  & F &  & F & T & T & F & T &  &  & \\
+F & T & T & T & T & F &  & F &  & F & T & T &  & \textbf{F} &  & F &  & T & T & F &  & F &  & F & T & T & F & T &  &  & \\
+F & T & T & T & F & T &  & F &  & T & T & T &  & \textbf{F} &  & T &  & F & F & F &  & T &  & F & T & T & F & T &  &  & \\
+F & T & T & T & F & F &  & F &  & F & T & T &  & \textbf{F} &  & T &  & F & F & F &  & T &  & F & T & T & F & T &  &  & \\
+F & T & T & F & T & T &  & F &  & T & T & F &  & \textbf{F} &  & F &  & T & T & F &  & F &  & F & T & T & F & T &  &  & \\
+F & T & T & F & T & F &  & T &  & F & F & F &  & \textbf{F} &  & F &  & T & T & F &  & F &  & F & T & T & F & T &  &  & \\
+F & T & T & F & F & T &  & F &  & T & T & F &  & \textbf{F} &  & T &  & F & F & F &  & T &  & F & T & T & F & T &  &  & \\
+F & T & T & F & F & F &  & T &  & F & F & F &  & \textbf{T} &  & T &  & F & F & F &  & T &  & F & T & T & F & T &  &  & \\
+F & T & F & T & T & T &  & F &  & T & T & T &  & \textbf{F} &  & F &  & T & T & F &  & F &  & F & T & T & T & F &  &  & \\
+F & T & F & T & T & F &  & F &  & F & T & T &  & \textbf{F} &  & F &  & T & T & F &  & F &  & F & T & T & T & F &  &  & \\
+F & T & F & T & F & T &  & F &  & T & T & T &  & \textbf{F} &  & T &  & F & F & F &  & T &  & F & T & T & T & F &  &  & \\
+F & T & F & T & F & F &  & F &  & F & T & T &  & \textbf{F} &  & T &  & F & F & F &  & T &  & F & T & T & T & F &  &  & \\
+F & T & F & F & T & T &  & F &  & T & T & F &  & \textbf{F} &  & F &  & T & T & F &  & F &  & F & T & T & T & F &  &  & \\
+F & T & F & F & T & F &  & T &  & F & F & F &  & \textbf{F} &  & F &  & T & T & F &  & F &  & F & T & T & T & F &  &  & \\
+F & T & F & F & F & T &  & F &  & T & T & F &  & \textbf{F} &  & T &  & F & F & F &  & T &  & F & T & T & T & F &  &  & \\
+F & T & F & F & F & F &  & T &  & F & F & F &  & \textbf{T} &  & T &  & F & F & F &  & T &  & F & T & T & T & F &  &  & \\
+F & F & T & T & T & T &  & F &  & T & T & T &  & \textbf{F} &  & F &  & T & T & F &  & F &  & T & F & F & F & T &  &  & \\
+F & F & T & T & T & F &  & F &  & F & T & T &  & \textbf{F} &  & F &  & T & T & F &  & F &  & T & F & F & F & T &  &  & \\
+F & F & T & T & F & T &  & F &  & T & T & T &  & \textbf{F} &  & T &  & F & F & F &  & F &  & T & F & F & F & T &  &  & \\
+F & F & T & T & F & F &  & F &  & F & T & T &  & \textbf{F} &  & T &  & F & F & F &  & F &  & T & F & F & F & T &  &  & \\
+F & F & T & F & T & T &  & F &  & T & T & F &  & \textbf{F} &  & F &  & T & T & F &  & F &  & T & F & F & F & T &  &  & \\
+F & F & T & F & T & F &  & T &  & F & F & F &  & \textbf{F} &  & F &  & T & T & F &  & F &  & T & F & F & F & T &  &  & \\
+F & F & T & F & F & T &  & F &  & T & T & F &  & \textbf{F} &  & T &  & F & F & F &  & F &  & T & F & F & F & T &  &  & \\
+F & F & T & F & F & F &  & T &  & F & F & F &  & \textbf{F} &  & T &  & F & F & F &  & F &  & T & F & F & F & T &  &  & \\
+F & F & F & T & T & T &  & F &  & T & T & T &  & \textbf{F} &  & F &  & T & T & F &  & F &  & T & F & T & T & F &  &  & \\
+F & F & F & T & T & F &  & F &  & F & T & T &  & \textbf{F} &  & F &  & T & T & F &  & F &  & T & F & T & T & F &  &  & \\
+F & F & F & T & F & T &  & F &  & T & T & T &  & \textbf{F} &  & T &  & F & F & F &  & T &  & T & F & T & T & F &  &  & \\
+F & F & F & T & F & F &  & F &  & F & T & T &  & \textbf{F} &  & T &  & F & F & F &  & T &  & T & F & T & T & F &  &  & \\
+F & F & F & F & T & T &  & F &  & T & T & F &  & \textbf{F} &  & F &  & T & T & F &  & F &  & T & F & T & T & F &  &  & \\
+F & F & F & F & T & F &  & T &  & F & F & F &  & \textbf{F} &  & F &  & T & T & F &  & F &  & T & F & T & T & F &  &  & \\
+F & F & F & F & F & T &  & F &  & T & T & F &  & \textbf{F} &  & T &  & F & F & F &  & T &  & T & F & T & T & F &  &  & \\
+F & F & F & F & F & F &  & T &  & F & F & F &  & \textbf{T} &  & T &  & F & F & F &  & T &  & T & F & T & T & F &  &  & \\
+\end{tabular}
+
+\end{enumerate}
+% \end{document}

@@ -1,0 +1,330 @@
+% \input{preamble}
+% \date{2023/09/27}
+% \begin{document}
+% \maketitle
+
+\section{\S 7.6 Conditional Arguments}
+\begin{enumerate}
+
+\begin{statement}{Provided the fetus is a person, a fetus has a right to life. Should a fetus
+ have a right to life, it is false that someone has the right to take its
+ life. However, if abortions are moral, someone does have the right to
+ take the life of a fetus. Consequently, if a fetus is a person, abortions
+ are not moral.
+}
+\symbol{A}{The fetus is a person}
+\symbol{B}{fetus has a right to life}
+\symbol{C}{Someone has a right to take the life of a fetus}
+\symbol{D}{Abortions are moral}
+\symbolization{A \implies B, B \implies \neg C, D \implies C,  \therefore A
+    \implies \neg D}
+\end{statement}
+
+\begin{statement}{Lung cancer is not caused by smoking, and this is so for the
+    following reasons. Lung cancer is more common among male smokers than among
+    female smokers. If smoking were the cause of lung cancer, this would not be
+    true. The fact that lung cancer is more common among male smokers implies
+    that it is caused by something in the male makeup. But if it is caused by
+    this, it is not caused by smoking. }
+\symbol{A}{Lung cancer is caused by smoking}
+\symbol{B}{Lung cancer is more common among male smokers than female smokers}
+\symbol{C}{Lung cancer is caused by something in the male makeup}
+\symbolization{B, A \then \neg B, B \then C, C \then \neg A, \therefore \neg A}
+\end{statement}
+
+\begin{statement}
+    {Some people do not think that the abortion issue turns solely on the
+    question of whether the fetus is a person. They would offer the following
+    argument: Abortion isn't wrong, since it is wrong only if a fetus has the
+    right to use the organs of other persons to stay alive. But (since no one
+    has that right) a fetus doesn't have that right either.}
+\symbol{W}{Abortion is wrong}
+\symbol{U}{A fetus has a right to use the organs of another person to stay alive}
+\symbolization{W \then U, \neg U \therefore \neg W}
+\end{statement}
+
+\begin{statement}
+    {If the ventricles transmit two ounces of blood at each beat, then if they
+    beat 60 times a minute, then they will transmit over seven pounds of blood
+    in a minute. Let us suppose that both these conditions are true. They won't
+    transmit seven pounds of blood in a minute unless the veins supply them with
+    that much blood. If the blood doesn't circulate, there is no way the veins
+    can supply that much blood. From this it is clear that the blood circulates.
+    }
+\symbol{V}{Ventricles transmit two ounces of blood at each beat;}
+\symbol{B}{The heart beats 60 times per minute;}
+\symbol{T}{The ventricles transmit seven pounds of blood per minute;}
+\symbol{W}{The veins supply the ventricles with seven pounds of blood per minute;}
+\symbol{C}{Blood circulates}
+    \symbolization{V \then (B \then T), V, B, \neg W \then \neg T, \neg C \then
+    \neg W \therefore C}
+\end{statement}
+
+\begin{statement}{If intelligence is wholly hereditary and identical twins have
+    the same heredity, then being raised in separate households will not reduce
+    the similarity of intelligence between identical twins, but it does reduce
+    the similarity. Identical twins have come from a common sperm and egg. This
+    last is so if, and only if, the twins have identical heredity. Therefore,
+    intelligence is not entirely hereditary.
+
+(Ask yourself whether if you were to assert the first premise, you would also be
+asserting that being raised in separate households does reduce the similarity
+between identical twins. If your intuition is yes, then the first premise must
+    be a conjunction.)}
+
+\symbol{H}{Intelligence is entirely hereditary}
+\symbol{I}{Being raised in separate households will reduce similarity of intelligence between identical twins}
+\symbol{T}{Identical twins have the same heredity}
+\symbol{P}{Identical twins come from a common sperm and egg}
+    \symbolization{((H \land T) \then \neg I) \land I, P, P \iff T, \therefore \neg H}
+\end{statement}
+
+\begin{statement}{If there are an infinite number of points in a finite line L,
+    then if those points have size, L will be infinitely long, and if they do
+    not have size, L won't have length. Line L is neither infinitely long nor
+    without length. This proves that there are not an infinite number of points
+    in L.}
+\symbol{I}{There are an infinite number of points in a finite line}
+\symbol{H}{Points have size}
+\symbol{L}{Line L is infinitely long}
+\symbol{G}{Line L has length}
+    \symbolization{I \then ((H \then L) \land (\neg H \then \neg G)), \neg L
+    \land G, \therefore \neg I}
+\end{statement}
+
+\begin{statement}{ The following argument is sometimes called ‘Pascal's wager',
+    named after Blaise Pascal, a seventeenth-century French philosopher and
+    mathematician: If I believe in God, then if He exists, I gain, and if He
+    doesn't, then I don't lose. If, on the other hand, I don't believe in God,
+    then if He exists, I lose, and if He doesn't, I don't gain. From this it
+    follows that if I believe, I'll either gain or not lose, while if I don't
+    believe, I'll either lose or fail to gain.}
+\symbol{B}{I believe in God}
+\symbol{E}{God exists}
+\symbol{G}{I gain}
+\symbol{L}{I lose}
+    \symbolization{(B \then ((E \then G) \lor (\neg E \then \neg L))) \lor (\neg B \then ((E \then L) \lor (\neg E \then \neg G)))}
+    \symbolization{\therefore (B \then (G \lor \neg L)) \land (\neg B \then (L
+    \lor \neg G))}
+\end{statement}
+
+\begin{statement} {If the world is disordered, it cannot be reformed unless a
+    sage appears, but no sage can appear if the world is disordered. It follows
+    that the world cannot be reformed if it is disordered.}
+\symbol{D}{The world is disordered}
+\symbol{W}{The world can be reformed}
+\symbol{S}{A sage can appear}
+    \symbolization{D \then (\neg S \then \neg W), D \then \neg S, \therefore D \then \neg W}
+\end{statement}
+
+\begin{statement} { People won't be given bribes if we discourage bribery. But
+    unless people are given bribes, cases of bribery won't come before the
+    public attention, and people won't know that bribery is wrong unless it
+    comes to their attention. Given all this and the moral principle: bribery is
+    wrong provided that people know that it is wrong, we can draw the following
+    startling conclusion: Bribery is wrong only if we don't discourage it. }
+\symbol{B}{Bribery is wrong}
+\symbol{D}{We discourage bribery}
+\symbol{G}{People will be given bribes}
+\symbol{A}{Cases of bribery will come before the public attention}
+\symbol{K}{People know that bribery is wrong}
+    \symbolization{D \then \neg G, (\neg G \then \neg A) \land (\neg A \then
+    \neg K), K \then B \therefore B \then \neg D}
+\end{statement}
+
+\begin{statement} {George will leave unless Mary doesn't leave. But unless Phil
+    stays, she will leave, and George won't leave provided that it rains. As a
+    result, if it rains, Mary won't leave. }
+\symbol{G}{George will leave}
+\symbol{M}{Mary does leave}
+\symbol{P}{Phil stays}
+\symbol{R}{It rains}
+    \symbolization{M \then G, (\neg P \then M) \land (R \then \neg G), \therefore
+    R \then \neg M)}
+\end{statement}
+
+\begin{statement} { All high-ranking officers in our present army are
+    volunteers. Military coups are engineered by high-ranking officers. Provided
+    that both the preceding statements are true, an all-volunteer army would not
+    increase the chances of a military takeover. Consequently, the chances of a
+    military coup would not be increased by the institution of an all-volunteer
+    army.}
+\symbol{H}{All high-ranking officers in our present army are volunteers}
+\symbol{E}{Military coups are engineered by high-ranking officers}
+\symbol{I}{an all-volunteer army will increase the chances of a military takeover}
+    \symbolization{H, E, (H \land E) \then \neg I \therefore \neg I }
+\end{statement}
+
+\begin{statement} {It is not the case that there will be both a continuation of PLO raids in Israel
+and peace in the Middle East. The PLO raids on Israel will not continue only if
+Arabs gain autonomy on the West Bank. So there will be no peace in the Middle
+East, since the West Bank Arabs will not gain autonomy.}
+\symbol{C}{There will be a continuation of PLO raids in Israel}
+\symbol{P}{There will be peace in the Middle East}
+\symbol{A}{Arabs gain autonomy on the West Bank}
+\symbolization{\neg (C \land P), \neg C \then A \therefore \neg A \then \neg P}
+\end{statement}
+
+\begin{statement} {Hopes for peace in the Middle East are unrealistic unless Clinton makes a secret
+deal with the Israeli prime minister. Clinton will make a secret deal with the
+Israeli prime minister if and only if he is not as inexperienced in foreign
+affairs as we have been led to believe. Since Clinton is as inexperienced in
+foreign affairs as we have been led to believe, hopes for peace in the Middle
+East are unrealistic.}
+\symbol{H}{Hopes for peace in the Middle East are realistic}
+\symbol{C}{Clinton makes a secret deal with the Israeli prime minister}
+\symbol{E}{Clinton is as experienced in foreign affairs as we have been led to believe}
+\symbolization{\neg C \then \neg H, C \iff E, \neg E \therefore \neg H}
+\end{statement}
+
+\begin{statement} {We will play tennis and go jogging only if the temperature
+    reaches 45 degrees. It will not reach 45 degrees. So, we will not play
+    tennis, and we will not go jogging.}
+\symbol{T}{We play tennis}
+\symbol{J}{We jog}
+\symbol{R}{The temperature reached 45 degrees}
+    \symbolization{(T \land J) \then R, \neg R, \therefore \neg T \land \neg J}
+\end{statement}
+
+\begin{statement} {The Vietnamese ceasefire will lead to a permanent peace only
+    if neither the Communists nor the Saigon regime retain their former tactics.
+    But they are not going to give up their former tactics. So the ceasefire
+    will not lead to a permanent peace.}
+\symbol{P}{The Vietnamese ceasefire will lead to permanent peace}
+\symbol{C}{Communists retain their tactics}
+\symbol{S}{Saigon retains its tactics}
+    \symbolization{P \then (\neg C \land \neg S), C \land S, \therefore \neg P}
+\end{statement}
+
+% The problem in each of the following passages is to determine whether or not
+% it contains an argument, and, if so, to reconstruct it. Reconstruction involves
+% distinguishing between premises and conclusion, and, perhaps, supplying miss-
+% ing premises and/or conclusion. Once you have reconstructed an argument,
+% symbolize it in PL.
+
+\begin{statement}{ ‘What is not so generally recognized is that there can be no
+    way of proving that the existence of a god, such as the God of Christianity,
+    is even probable. Yet this also is easily shown. For if the existence of
+    such a god were probable, then the proposition that he existed would be an
+    empirical hypothesis. And in that case it would be possible to deduce from
+    it, and other empirical hypotheses, certain experiential propositions which
+    were not deducible from these other hypotheses alone. But in fact this is
+    not possible' (A. J. Ayer, Language, Truth, and Logic).}
+
+\symbol{G}{There is a way of proving that the existence of God is probable}
+\symbol{E}{The proposition that God exists is an empirical hypothesis}
+\symbol{C}{It is possible to deduce from the proposition that God exists certain experiential propositions}
+    \symbolization{G \then E, E \then C, \neg C \therefore \neg G}
+\end{statement}
+
+\begin{statement}{‘As a challenge to theism, the problem of evil has
+    traditionally been posed in the form of a dilemma: if God is perfectly
+    loving, he must wish to abolish evil; and if he is all-powerful, he must be
+    able to abolish evil. But evil exists; therefore, God cannot be both
+    omnipotent and perfectly loving' (missing premise) (John Hick, Philosophy of
+    Religion).}
+\symbol{W}{God wants to abolish evil}
+\symbol{A}{God is able to abolish evil}
+\symbol{E}{Evil exists}
+\symbol{L}{God is all loving}
+\symbol{P}{God is all-powerful}
+\symbol{M}{God wishes to abolish evil}
+    \symbolization{(W \land A) \then \neg E, (L \then W) \land (P \then A), E, \therefore \neg (P \land L)}
+\end{statement}
+
+\begin{statement} {Background information: suppose you are on the committee
+    which has to plan the release of tickets for a big rock concert; you are
+    faced with a problem. The problem is that some of your helpers will be out
+    of town next week, and the concert is coming up soon; so, if you do not give
+    out the tickets until later, there will not be enough lead time before the
+    concert. You are then presented with the following valid argument by one ofj
+    your helpers: If we have the ticket release next week, we will be
+    short-handed for the release. But if we have the release later, people won't
+    be happy with us. But in fact, people will be happy with us only if we are
+    not short-handed for the release (because they do not want to have to wait
+    too long in line). So, people will not be happy with us.}
+\symbol{R}{The ticket release is next week}
+\symbol{S}{We are short-handed on ticket-sellers}
+\symbol{H}{People will be happy}
+    \symbolization{(R \then S), (\neg R \then \neg H), H \then \neg S,
+    \therefore \neg H}
+\end{statement}
+
+\begin{statement}{There will be a revolution unless something is done to improve
+    living conditions among the poorer classes. But nothing will be done to
+    improve those conditions. Hence, there will be a revolution.}
+\symbol{D}{Something is done to improve living conditions among the poorer classes}
+\symbol{R}{There will be a revolution}
+    \symbolization{\neg D \then R, \neg D \therefore R }
+\end{statement}
+
+\begin{statement}{If Frank and Bill ride bikes, then Mary doesn't ride a bike
+    only if John rides one. Bill doesn't ride a bike unless John rides one.
+    Therefore, Mary rides a bike if, and only if, John rides a bike.}
+\symbol{F}{Frank rides a bike}
+\symbol{B}{Bill rides a bike}
+\symbol{M}{Mary rides a bike}
+\symbol{J}{John rides a bike}
+\symbolization{(F \land B) \then (\neg M \then J), \neg J \then \neg B \therefore M \iff J}
+\end{statement}
+
+\begin{statement}{ If Harry takes drugs, then if he drinks, he is going to get
+    himself into some serious trouble. But Bill drinks without Harry drinking.
+    And Frank doesn't take drugs if Harry takes drugs. Therefore, Bill drinks
+    and Frank takes drugs only if Harry drinks and takes drugs.}
+\symbol{T}{Harry takes drugs}
+\symbol{D}{Harry drinks}
+\symbol{S}{Harry is going to get himself into some serious trouble}
+\symbol{B}{Bill drinks}
+\symbol{F}{Frank takes drugs}
+\symbolization{T \then (D \then S), B \land \neg D, T \then \neg F \therefore (B \land F) \then (D \land T)}
+\end{statement}
+
+\begin{statement}{Two people are on the train provided that bill got off. bill's
+    getting off is necessary for his getting to work on time. therefore, if bill
+    got to work on time, there are two people on the train.}
+\symbol{B}{Bill got off the train}
+\symbol{T}{Two people are on the train}
+\symbol{W}{Bill got to work on time}
+\symbolization{B \then T, W \then B, \therefore W \then T}
+\end{statement}
+
+\begin{statement}{If cars have engines and provided that trains have engines,
+    then boats have engines, but boats don't have engines. Therefore, cars have
+    engines just in case trains have engines.}
+\symbol{C}{Cars have engines}
+\symbol{T}{Trains have engines}
+\symbol{B}{Boats have engines}
+\symbolization{(C \land T) \then B, \neg B, \therefore C \iff T}
+\end{statement}
+
+\begin{statement}{‘If George were leaving, I think he'd tell me first,' Mr
+    Rogers said. ‘He hasn't told me. He hasn't left.'}
+\symbol{G}{George leaves}
+\symbol{T}{George tells Mr Rogers first}
+\symbolization{G \then T \land \neg T \therefore \neg G}
+\end{statement}
+
+\begin{statement}{At this very point a disturbing, though obvious, question
+    intrudes. If Harry's thesis is false, then there is no point in his having
+    written the book or our reading it. But if his thesis is true, then there is
+    also no point in his having written the book or our reading it.}
+\symbol{T}{Harry's thesis is true}
+\symbol{W}{There is some point in Harry's having written the book}
+\symbol{R}{There is some point in our having read the book}
+    \symbolization{(\neg T \then (\neg R \land \neg W)) \land (T \then (W \land
+    R)) \therefore \neg R \land \neg W}
+\end{statement}
+
+\begin{statement}{Some later Greek writer used erosion by water as evidence for
+    the temporal origin of the earth; for, they argued, if the earth has
+    existed from eternity, all mountains and other features would by now have
+    disappeared.}
+\symbol{E}{The earth had a beginning}
+\symbol{M}{The mountains still exist}
+\symbol{N}{mountains and other features are created}
+\symbolization{\neg E \then (M \land \neg N), \neg\neg M \therefore E}
+\end{statement}
+\end{enumerate}
+
+% \end{document}
