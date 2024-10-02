@@ -6,29 +6,29 @@
 \section{\S 7.8, Truth Tables and Arguments}
 \begin{enumerate}
 
-\item
-\begin{tabular}{@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c}
-    E & F &  & ( & E & $\rightarrow$ & F & ) & $\therefore $ & ( & $\lnot$ & F & $\rightarrow$ & $\lnot$ & E & ) & \\
-    \hline
-    T & T &  &  & T & T & T &  & \textbf{T} &  & F & T & T & F & T &  & \\
-    T & F &  &  & T & F & F &  & \textbf{T} &  & T & F & F & F & T &  & \\
-    F & T &  &  & F & T & T &  & \textbf{T} &  & F & T & T & T & F &  & \\
-    F & F &  &  & F & T & F &  & \textbf{T} &  & T & F & T & T & F &  & \\
-\end{tabular}
+	\item
+	      \begin{tabular}{@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c}
+		      E & F &  & ( & E & $\rightarrow$ & F & ) & $\therefore $ & ( & $\lnot$ & F & $\rightarrow$ & $\lnot$ & E & ) & \\
+		      \hline
+		      T & T &  &   & T & T             & T &   & \textbf{T}    &   & F       & T & T             & F       & T &   & \\
+		      T & F &  &   & T & F             & F &   & \textbf{T}    &   & T       & F & F             & F       & T &   & \\
+		      F & T &  &   & F & T             & T &   & \textbf{T}    &   & F       & T & T             & T       & F &   & \\
+		      F & F &  &   & F & T             & F &   & \textbf{T}    &   & T       & F & T             & T       & F &   & \\
+	      \end{tabular}
 
-\item
-\begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{}c@{}@{ }c}
-B & C & D &  & ( & D & $\rightarrow$ & ( & B & $\land$ & C & ) & ) & $\therefore $ & ( & B & $\rightarrow$ & ( & C & $\rightarrow$ & D & ) & ) & \\
-\hline
-T & T & T &  &  & T & T &  & T & T & T &  &  & \textbf{T} &  & T & T &  & T & T & T &  &  & \\
-T & T & F &  &  & F & T &  & T & T & T &  &  & \textbf{F} &  & T & F &  & T & F & F &  &  & \\
-T & F & T &  &  & T & F &  & T & F & F &  &  & \textbf{T} &  & T & T &  & F & T & T &  &  & \\
-T & F & F &  &  & F & T &  & T & F & F &  &  & \textbf{T} &  & T & T &  & F & T & F &  &  & \\
-F & T & T &  &  & T & F &  & F & F & T &  &  & \textbf{T} &  & F & T &  & T & T & T &  &  & \\
-F & T & F &  &  & F & T &  & F & F & T &  &  & \textbf{T} &  & F & T &  & T & F & F &  &  & \\
-F & F & T &  &  & T & F &  & F & F & F &  &  & \textbf{T} &  & F & T &  & F & T & T &  &  & \\
-F & F & F &  &  & F & T &  & F & F & F &  &  & \textbf{T} &  & F & T &  & F & T & F &  &  & \\
-\end{tabular}
+	\item
+	      \begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{}c@{}@{ }c}
+		      B & C & D &  & ( & D & $\rightarrow$ & ( & B & $\land$ & C & ) & ) & $\therefore $ & ( & B & $\rightarrow$ & ( & C & $\rightarrow$ & D & ) & ) & \\
+		      \hline
+		      T & T & T &  &   & T & T             &   & T & T       & T &   &   & \textbf{T}    &   & T & T             &   & T & T             & T &   &   & \\
+		      T & T & F &  &   & F & T             &   & T & T       & T &   &   & \textbf{F}    &   & T & F             &   & T & F             & F &   &   & \\
+		      T & F & T &  &   & T & F             &   & T & F       & F &   &   & \textbf{T}    &   & T & T             &   & F & T             & T &   &   & \\
+		      T & F & F &  &   & F & T             &   & T & F       & F &   &   & \textbf{T}    &   & T & T             &   & F & T             & F &   &   & \\
+		      F & T & T &  &   & T & F             &   & F & F       & T &   &   & \textbf{T}    &   & F & T             &   & T & T             & T &   &   & \\
+		      F & T & F &  &   & F & T             &   & F & F       & T &   &   & \textbf{T}    &   & F & T             &   & T & F             & F &   &   & \\
+		      F & F & T &  &   & T & F             &   & F & F       & F &   &   & \textbf{T}    &   & F & T             &   & F & T             & T &   &   & \\
+		      F & F & F &  &   & F & T             &   & F & F       & F &   &   & \textbf{T}    &   & F & T             &   & F & T             & F &   &   & \\
+	      \end{tabular}
 
 \end{enumerate}
 % \end{document}
